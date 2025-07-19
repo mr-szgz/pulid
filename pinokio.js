@@ -1,11 +1,11 @@
 const path = require('path')
 module.exports = {
   version: "3.7",
-  title: "PuLID",
+  title: "PuLID Gradio Demo",
   description: "",
   icon: "icon.png",
   menu: async (kernel, info) => {
-    let installed = info.exists("app/env")
+    let installed = info.exists("app") && info.exists(".env") 
     let running = {
       install: info.running("install.js"),
       start: info.running("start.js"),
@@ -64,12 +64,26 @@ module.exports = {
           href: "link.js",
         }]
       } else {
-        return [{
-          default: true,
-          icon: "fa-solid fa-power-off",
-          text: "Start",
-          href: "start.js",
-        }, {
+        return [
+          {
+            default: true,
+            icon: "fa-solid fa-power-off",
+            text: "Start",
+            href: "start.js",
+            params: { edition: "default" },
+          }, {
+            default: true,
+            icon: "fa-solid fa-power-off",
+            text: "Start v1.1",
+            href: "start.js",
+            params: { edition: "1.1" },
+          }, {
+            default: true,
+            icon: "fa-solid fa-power-off",
+            text: "Start (Flux)",
+            href: "start.js",
+            params: { edition: "flux" },
+          }, {
           icon: "fa-solid fa-plug",
           text: "Update",
           href: "update.js",
