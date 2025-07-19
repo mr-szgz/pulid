@@ -37,7 +37,8 @@ module.exports = {
         },
         message: [
           "pip install -r app/requirements.txt",
-          "pip install xformers huggingface-hub==0.25.2"
+          "pip install xformers",
+          "pip install huggingface-hub==0.25.2"
         ]
       },
     }

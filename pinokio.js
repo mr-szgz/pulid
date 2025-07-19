@@ -27,19 +27,21 @@ module.exports = {
           return [{
             default: true,
             icon: "fa-solid fa-rocket",
-            text: "Open Web UI",
+            text: `Open v${local.edition || '1'} Web UI`,
             href: local.url,
           }, {
             icon: 'fa-solid fa-terminal',
-            text: "Terminal",
+            text: `Terminal`,
             href: "start.js",
+            params: { local },
           }]
         } else {
           return [{
             default: true,
             icon: 'fa-solid fa-terminal',
-            text: "Terminal",
+            text: `Terminal`,
             href: "start.js",
+            params: { local },
           }]
         }
       } else if (running.update) {
@@ -74,7 +76,7 @@ module.exports = {
           }, {
             default: true,
             icon: "fa-solid fa-power-off",
-            text: "Start v1.1",
+            text: "Start (v1.1)",
             href: "start.js",
             params: { edition: "1.1" },
           }, {

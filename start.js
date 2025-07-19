@@ -56,7 +56,8 @@ module.exports = {
       method: "local.set",
       params: {
         // the input.event is the regular expression match object from the previous step
-        url: "http://127.0.0.1{{input.event[1]}}"
+        url: "http://127.0.0.1{{input.event[1]}}",
+        edition: "{{args.edition ? args.edition : (args.local.edition ? args.local.edition : 'v1')}}",
       }
     }
   ]
