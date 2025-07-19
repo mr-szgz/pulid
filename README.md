@@ -1,4 +1,4 @@
 # PuLID
 
-A pinokio script for https://huggingface.co/spaces/mr-szgz/PuLID
+A pinokio script for [PuLID](https://github.com/ToTheBeginning/PuLID)
 

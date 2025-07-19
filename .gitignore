@@ -1,2 +1,13 @@
 node_modules
 .DS_Store
+.venv
+.env
+app/.env
+app/.venv
+PuLID/.env
+pulid/
+PuLID/.venv
+!PuLID\.gitkeep
+!app\.gitkeep
+pulid/*
+ENVIRONMENT
